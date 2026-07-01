@@ -1,0 +1,57 @@
+schema_version: 1
+
+machine:
+  slug: test-machine
+  brand: TestBrand
+  model: Test Machine 100
+  aliases: ["TM100"]
+  manual_pdf: manuals/test-machine/test-manual.pdf
+  manual_version: "TEST-1"
+  source_pages: 10
+  notes: "Fixture machine used only in tests."
+
+specifications:
+  - {label: "Needle system", value: "130/705 H", category: mechanical}
+  - {label: "Nominal voltage", value: "100-240 V", category: electrical}
+
+settings:
+  - number: 1
+    title: "Belt tension"
+    page: 3
+    description: "Adjust the belt tension by turning the eccentric bearing."
+    spec: "Firm tension"
+    service_menu_path: null
+    related_settings: []
+  - number: 2
+    title: "Needle centre position"
+    page: 4
+    description: "The needle should return to centre position when switched on."
+    spec: "0 mm gap at calibration stop"
+    service_menu_path: "1. Set menu - A. Needle menu"
+    related_settings: [1]
+
+service_program:
+  menus:
+    - number: 1
+      name: "Set menu"
+      submenus:
+        - letter: A
+          name: "Needle menu"
+          touch_areas:
+            - label: "Centre"
+              description: "Sets the needle to its centre position."
+              check_procedure: null
+
+disassembly:
+  - component: "Top cover"
+    page: 6
+    tools_needed: ["Torx 10"]
+    dismantle_steps: ["Remove two Torx 10 screws.", "Lift the cover off."]
+    mount_steps: ["Mount in reverse order."]
+    settings_to_recheck: [2]
+
+fault_finding:
+  - symptom: "The machine does not start."
+    checks: ["Check the power cable.", "Try a new circuit board."]
+    replace_order: ["circuit board"]
+    notes: null

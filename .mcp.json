@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "sewing-machine-knowledge": {
+      "command": "uv",
+      "args": ["--directory", "mcp-server", "run", "sewing-mcp-server"]
+    }
+  }
+}

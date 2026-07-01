@@ -1,0 +1,78 @@
+name: Validate and build knowledge index
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "manuals/**/knowledge.yaml"
+      - "manuals/**/knowledge.json"
+  pull_request:
+    paths:
+      - "manuals/**/knowledge.yaml"
+      - "manuals/**/knowledge.json"
+  workflow_dispatch: {}
+
+permissions:
+  contents: read
+
+concurrency:
+  group: build-index-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install mcp-server package
+        run: pip install -e "./mcp-server[dev]"
+
+      - name: Validate all knowledge files
+        run: python -m mcp_server.validate --manuals-dir manuals/
+
+      - name: Build index (proves it builds even on PRs)
+        run: python -m mcp_server.build_index --manuals-dir manuals/ --out index/knowledge.db
+
+      - name: Run test suite
+        run: pytest mcp-server/tests -v
+
+      - name: Upload built index for inspection (PRs only)
+        if: github.event_name == 'pull_request'
+        uses: actions/upload-artifact@v4
+        with:
+          name: knowledge-db-preview
+          path: index/knowledge.db
+
+  commit-index:
+    needs: validate
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install mcp-server package
+        run: pip install -e "./mcp-server[dev]"
+
+      - name: Rebuild index
+        run: python -m mcp_server.build_index --manuals-dir manuals/ --out index/knowledge.db
+
+      - name: Commit index if it changed
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "chore: rebuild knowledge index [skip ci]"
+          file_pattern: index/knowledge.db

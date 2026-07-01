@@ -1,0 +1,1456 @@
+schema_version: 1
+
+machine:
+  slug: pfaff-quilt-expression-720
+  brand: Pfaff
+  model: Quilt Expression 720
+  aliases:
+    - "Quilt expression 720"
+    - "QE720"
+    - "Quilt Expression 720"
+  manual_pdf: manuals/pfaff-quilt-expression-720/Pfaff-Quilt-Expression-720-SM-ijvmix.pdf
+  manual_version: "104 73 71-26"
+  source_pages: 93
+  notes: >
+    Service manual, version 27 March 2020, (c) 2020 VSM Group AB. This is a SERVICE
+    manual for workshop/dealer technicians, not an end-user manual.
+    Authoring note: the source PDF's own body text contains numeric cross-references
+    to other settings (e.g. "This setting affects: 11. The needle bar height") that do
+    NOT match the current Settings table-of-contents numbering -- most are off by 2,
+    apparently because two settings ("8. Cut sensor calibration" and "9. Setting the
+    feed unit sideways") were inserted into the sequence during a later manual revision
+    and downstream cross-references were never updated to match. A few references are
+    off by other amounts, or not offset at all (references to settings 1-5 are usually
+    correct as printed). Every related_settings/settings_to_recheck cross-reference in
+    this file was therefore resolved by matching the referenced setting's TITLE against
+    the current TOC, not by trusting the printed number -- so numbers here are reliable
+    even where the raw PDF text is not.
+
+specifications:
+  - {label: "Machine type", value: "Computerized free-arm machine for utility stitches", category: general}
+  - {label: "Stitch pattern storage", value: "Electronic stitch pattern storage", category: general}
+  - {label: "Zigzag stitch width", value: "0 to 9 mm, 0.125 mm needle movement resolution", category: mechanical}
+  - {label: "Feed length", value: "0 to 6 mm forwards and 0 to 6 mm reverse, 0.125 mm resolution", category: mechanical}
+  - {label: "Needle positions", value: "37 different needle positions can be set", category: mechanical}
+  - {label: "Feed dog drop", value: "Electronic feed dog drop", category: electrical}
+  - {label: "Presser foot lifter", value: "Automatic presser foot lifter with pivot, high and extra high position", category: mechanical}
+  - {label: "Presser foot lift", value: "8 mm", category: mechanical}
+  - {label: "Max. presser foot height", value: "12 mm", category: mechanical}
+  - {label: "Presser foot pressure", value: "Electronically controlled and adjustable", category: electrical}
+  - {label: "Needle up/down indicator", value: "Electronically controlled needle up/down position with LED indicator", category: electrical}
+  - {label: "Thread cutter", value: "Thread cutter button with LED indicator", category: electrical}
+  - {label: "Reverse sewing button", value: "Two LED indications (reverse or tie-off)", category: electrical}
+  - {label: "Bobbin thread monitor", value: "Bobbin thread monitor", category: electrical}
+  - {label: "Motor control", value: "Digital motor control, 60 to 1050 r.p.m.", category: electrical}
+  - {label: "Reduced speeds", value: "Several pattern-dependent reduced speeds in addition to normal range", category: electrical}
+  - {label: "Anti-blocking device", value: "When machine is blocked, an anti-blocking device switches the motor off automatically after 1 to 3 seconds", category: electrical}
+  - {label: "Foot control", value: "100k foot control (cold) with automatic-rewind cable", category: electrical}
+  - {label: "Master switch", value: "Master switch for motor, electronics, and LEDs", category: electrical}
+  - {label: "Bobbin winding", value: "Bobbin winding possible during sewing due to separate motor", category: mechanical}
+  - {label: "Needle bar frame", value: "Pendulum-type needle bar frame", category: mechanical}
+  - {label: "Drive transmission (arm shaft to lower shaft)", value: "Toothed belt, transmission ratio 1:1", category: mechanical}
+  - {label: "Power consumption", value: "1.7 - 0.8 A", category: electrical}
+  - {label: "Nominal voltage", value: "Universal, 100-240 V", category: electrical}
+  - {label: "Hook", value: "PFAFF horizontal double-rotating hook", category: mechanical}
+  - {label: "Take-up lever", value: "Link take-up lever", category: mechanical}
+  - {label: "Stitch length regulator", value: "Slide block regulator for forwards and reverse stitch lengths", category: mechanical}
+  - {label: "Feed", value: "Dual feed, original IDT", category: mechanical}
+  - {label: "Main drive", value: "Drive from motor to handwheel by flat-toothed belt", category: mechanical}
+  - {label: "Bearings", value: "Sintered metal bearings", category: mechanical}
+  - {label: "Bearing oil", value: "Anderol 500", category: mechanical}
+  - {label: "Lighting", value: "Four banks of LEDs", category: electrical}
+  - {label: "Clear workspace (D x H)", value: "250 x 107 mm", category: mechanical}
+  - {label: "Dimensions (W x H x D)", value: "217 x 295 x 492 mm", category: mechanical}
+  - {label: "Free-arm dimensions", value: "Length 135 mm, circumference 260 mm", category: mechanical}
+  - {label: "Housing material", value: "Aluminum", category: mechanical}
+  - {label: "Weight of sewing machine", value: "11 kg", category: mechanical}
+  - {label: "Needle system", value: "130/705 H", category: mechanical}
+  - {label: "Ambient temperature (operating)", value: "10 to 40 C (50 to 104 F)", category: environmental}
+  - {label: "Air humidity (operating)", value: "20% to 80%", category: environmental}
+
+settings:
+  - number: 1
+    title: "Belt tension - Drive belt"
+    page: 13
+    description: >
+      Remove all covers and the bobbin winding device. Loosen the two screws (A) of the
+      bearing clamps. The belt tension can then be adjusted by turning the eccentric
+      bearing (B) until the belt tension is firm. NOTE: the hole (C) in the eccentric
+      bearing should always end up on the front half.
+    spec: "Belt tension firm (no numeric gauge specified)"
+    service_menu_path: null
+    related_settings: []
+
+  - number: 2
+    title: "Belt tension - Motor belt"
+    page: 13
+    description: >
+      Remove the rear cover. Move the belt tension spring (A); it should normally be
+      positioned in the left slot on the belt tension device.
+    spec: "Tension spring (A) in the left slot (normal position)"
+    service_menu_path: null
+    related_settings: []
+
+  - number: 3
+    title: "The play of the hook gear"
+    page: 14
+    description: >
+      Check: rotate the hook back and forth using the hand wheel and check the play at
+      at least 3 different spots during one revolution of the cog wheel. Adjustment:
+      loosen screw (A) in the bearing clamp, then adjust the play by turning the
+      eccentric bearing (C). NOTE: the hole (B) in the bearing shall always be on the
+      lower half.
+    spec: "As small and even as possible across the revolution; cannot be made perfectly equal at every point"
+    service_menu_path: null
+    related_settings: []
+
+  - number: 4
+    title: "Setting the hook in relation to the feeding eccentric (Timing feed motion)"
+    page: 15
+    description: >
+      Check: with the needle in centre position, straight stitching, set the tip of the
+      hook (A) so it is centered behind the needle; the pin (C) on the worm gear should
+      be positioned per fig. 1. Adjustment: remove all covers, remove the hook cover,
+      loosen screw (B), remove the hook, position the pin on the worm gear, then mount
+      the hook into its correct position.
+    spec: "Pin position 1.5 mm from the top of the frame opening"
+    service_menu_path: null
+    related_settings: [14]
+
+  - number: 5
+    title: "The gap between the needle and the hook"
+    page: 16
+    description: >
+      Check: set the machine to straight stitching, insert a new size-90 universal
+      needle, rotate the hand wheel until the tip of the hook arrives behind the
+      needle, and check the gap by pressing a small screwdriver against the needle.
+      Adjustment if gap too large: loosen screw (A), turn screw (B) clockwise until the
+      needle touches the hook tip, then turn screw (A) until the gap is correct.
+      Adjustment if gap too small: loosen screw (B), turn screw (A) to make the gap
+      larger then loosen screw (A) again, turn screw (B) clockwise until the needle
+      touches the hook tip, then turn screw (A) until correct. NOTE: the setting should
+      always be made so the needle is pushed away from the tip of the hook.
+    spec: "As small as possible, max. 0.15 mm"
+    service_menu_path: null
+    related_settings: [4]
+
+  - number: 6
+    title: "Setting the needle plate (the hook cover) sideways"
+    page: 17
+    description: >
+      Check: insert a #0A foot (C); the presser foot should, in the sideways direction,
+      be parallel on both sides (D) of the needle plate opening for the feed dog.
+      Adjustment: remove all covers, loosen the 4 screws (A) of the hook cover, turn
+      the two black setting pins (B) so the foot is parallel on both sides of the feed
+      dog opening on the needle plate, then check setting 7 (needle plate in relation to
+      the needle in the feeding direction).
+    spec: "Presser foot parallel on both sides of the feed dog opening"
+    service_menu_path: null
+    related_settings: [7]
+
+  - number: 7
+    title: "Setting the needle plate (the hook cover) in relation to the needle in the feeding direction"
+    page: 18
+    description: >
+      Check: insert a new size-90 universal needle; it should descend into the middle
+      of the needle hole of the needle plate in the feeding direction. Adjustment:
+      loosen the 4 screws (A) of the hook cover and move it so the needle descends
+      centered sideways in the needle plate, tighten the 4 screws (A), then recheck
+      setting 6 (needle plate sideways).
+    spec: "Needle centred in the needle hole, feeding direction"
+    service_menu_path: null
+    related_settings: [6]
+
+  - number: 8
+    title: "Cut sensor calibration"
+    page: 19
+    description: >
+      Calibrate via the service program: enter 3. Adjust menu - F. Cut sensor
+      calibration, touch the Set button to start calibration, then follow the on-screen
+      wizard: remove the stitch plate, clean from lint, push the fetcher to its most
+      left position, verify there is no room between the fetcher and the wall, then
+      touch OK to perform the calibration.
+    spec: "Sensor position value between 50-80 after a successful calibration; if out of range, touch the Set + button to recalibrate"
+    service_menu_path: "3. Adjust menu - F. Cut sensor calibration"
+    related_settings: []
+
+  - number: 9
+    title: "Setting the feed unit sideways"
+    page: 19
+    description: >
+      Check: the clearance between the feed unit and the casting should be 2.5 mm, as
+      indicated. Adjustment: disconnect the feed dog lowering rod, loosen the two
+      screws (A) of the feed unit, move the feed unit sideways until the 2.5 mm
+      distance is obtained, then tighten the two screws (A). Check and set settings 22
+      (feed dog in relation to needle plate) and 23 (feed dog lowering) afterward.
+    spec: "2.5 mm clearance between the feed unit and the casting"
+    service_menu_path: null
+    related_settings: [22, 23]
+
+  - number: 10
+    title: "The height of the hook"
+    page: 20
+    description: >
+      The front cover must be mounted when the hook height is checked. Check: the
+      distance between the bobbin case and the bobbin case holder should be 0.5 (+0.1 /
+      -0.05) mm, checked at the marked position (fig. 1). Adjustment (all covers must be
+      removed): loosen screw (A), push the bobbin case down with a finger, put a 0.6 mm
+      feeler gauge between the bobbin case and the bobbin case holder at the threading
+      arrow location, remove the finger (a spring pushes the hook upward against the
+      gauge), tighten screw (A), then re-check with a 0.5 mm feeler gauge -- it should
+      go in but a small resistance should be felt. This setting affects settings 13
+      (needle bar height) and 14 (timing of the hook in relation to the needle).
+    spec: "0.5 mm (+0.1 / -0.05 mm) between bobbin case and bobbin case holder"
+    service_menu_path: null
+    related_settings: [13, 14]
+
+  - number: 11
+    title: "Feed dog height"
+    page: 21
+    description: >
+      Check: bring the feed dog to its highest position; the top of the feed dog teeth
+      should be 0.9-1.1 mm above the needle plate (check with setting gauge 413 12
+      73-01). Adjustment: bring the feed dog to its highest position, remove the needle
+      plate, adjust by turning the torx screw (A) until correct height is obtained
+      (clockwise = higher, counter-clockwise = lower), then mount the needle plate and
+      recheck.
+    spec: "0.9-1.1 mm above the needle plate"
+    service_menu_path: null
+    related_settings: []
+
+  - number: 12
+    title: "Setting the needle in centre position"
+    page: 22
+    description: >
+      Check 1: insert a new size-90 universal needle; the needle should always go to
+      its centre position when the machine is switched on repeatedly. Check 2 (service
+      program): enter 1. Set menu - A. Needle menu, touch "Calibrate" repeatedly -- the
+      needle should always go to its centre position in the #0A presser foot. Further
+      checks step through Perform Cal./Cal/Cal-1/Centre/Right/Left touch buttons to
+      verify the calibration-stop gap is exactly 0 mm. Adjustment (all covers removed,
+      front cover used as service panel connected by cable): loosen screw (E) on the
+      cog wheel (D), enter service program and touch "Centre", turn the cog wheel until
+      the needle is centred in the #0A presser foot, tighten screw (E); then loosen
+      screw (F) of the calibration stop (B), remove the OA presser foot, touch "Perform
+      Cal.", turn the calibration stop until the gap between the calibration segment
+      (A) and calibration stop is 0 mm, tighten screw (F).
+    spec: "0 mm gap between calibration segment (A) and calibration stop (B); needle centred in #0A foot"
+    service_menu_path: "1. Set menu - A. Needle menu"
+    related_settings: []
+
+  - number: 13
+    title: "The needle bar height"
+    page: 24
+    description: >
+      Check: bring the needle bar to its lower turning position; the gap between the
+      upper end of the needle and the surface (B) of the hook ring should be 28.55 mm
+      (+0.05 mm), checked with a gauge 28.55 mm long. Adjustment: bring the needle bar
+      to its lower turning position, loosen screw (A) and move the needle bar until the
+      correct distance is obtained, tighten screw (A). NOTE: check with a twin needle
+      that the needle bar is not twisted (can cause jump stitches with a twin needle).
+      This setting affects settings 18 (needle threader stop) and 19 (threading
+      device).
+    spec: "28.55 mm (+0.05 mm) between top of needle and hook ring surface"
+    service_menu_path: null
+    related_settings: [10, 18, 19]
+
+  - number: 14
+    title: "The timing of the hook in relation to the needle"
+    page: 25
+    description: >
+      NOTE: before any adjustment, check that setting 4 (hook in relation to the
+      feeding eccentric) is correct. Check: insert a new size-90 needle, remove the
+      needle plate, bobbin case holder and bobbin case, set the machine on straight
+      stitching; as the needle moves upwards, the tip of the hook should pass behind
+      the centre of the needle when the needle is 2.5 mm above its lower turning
+      position. Check with setting gauge: turn the hand wheel to the needle bar's lower
+      turning position, put the spacer on the needle bar and push it up against the
+      needle bar frame (C), fit the timing clamp and tighten its screw lightly, use the
+      2.5 mm feeler gauge on the needle bar above the clamp, push both gauge and clamp
+      up against the spacer and tighten the clamp screw, remove the feeler gauge, turn
+      the hand wheel in the sewing direction until the timing clamp stops against the
+      spacer -- the tip of the hook should now be behind the needle's centre line.
+      Adjustment: remove the blank pointed screw (B) and loosen the other 2 screws in
+      the belt wheel on the arm shaft, repeat the checking steps, hold the arm shaft and
+      turn the hook until its tip arrives behind the needle centre line, tighten one of
+      the black screws (making sure it descends into the shaft groove so the belt wheel
+      is positioned correctly sideways), check, then tighten all screws.
+    spec: "Hook tip passes behind needle centre line when needle is 2.5 mm above lower turning position"
+    service_menu_path: null
+    related_settings: [4, 10]
+
+  - number: 15
+    title: "Presser foot height and parallelism to the needle plate"
+    page: 26
+    description: >
+      Check: when the presser foot (B) is in its highest lifting position it shall be
+      approx. 12 mm above the needle plate (D), and in its down position the presser
+      foot (A) should be parallel to the feed dog (B). Adjustment: remove the thread
+      tension unit, use the function button to set the presser bar to its highest
+      position, loosen screw (C), insert gauge 413 14 17-01 from behind under the
+      presser foot #0A and into the cutouts of the needle plate, push the presser bar
+      against the gauge, tighten screw (C), mount the thread tension unit, then enter
+      the service program and perform setting 16 (needle plate position). This setting
+      affects setting 20 (IDT linkage holder height and parallelism).
+    spec: "Approx. 12 mm above the needle plate at highest lift; parallel to the feed dog when down"
+    service_menu_path: null
+    related_settings: [16, 20]
+
+  - number: 16
+    title: "Needle plate position"
+    page: 27
+    description: >
+      Used for setting the electronic distance between the highest and lowest position
+      of the presser bar. This setting should only be carried out if setting 15
+      (presser foot height and parallelism) has been reset, or if the PC-board has been
+      changed. Adjustment: put the #0A presser foot on the machine, enter the service
+      program - 3. Adjust menu - A. Presser foot menu, lower the feed dog via "Feed dog
+      drop" in the Side motion menu, touch "Calibrate" in Presser Foot menu (presser bar
+      takes its highest position), then touch "Needle plate position" in Presser Foot
+      menu (presser bar takes its lowest position).
+    spec: "Electronic calibration; no user-facing numeric tolerance"
+    service_menu_path: "3. Adjust menu - A. Presser foot menu"
+    related_settings: [15]
+
+  - number: 17
+    title: "Pivot height"
+    page: 28
+    description: >
+      Check: mount presser foot "#6A", enter service program - 3. Adjust menu - A.
+      Presser foot menu, lower the feed dog, use the function button to set the presser
+      bar to its Pivot position; the distance between the lower side of presser foot
+      #6A and the needle plate should be 1.35 mm (+/-0.20 mm). Adjustment: use the + and
+      - touch buttons in the Presser foot menu (adjustable range -12 to +12); the
+      adjustment is applied automatically when + or - is touched, and saved when the
+      machine is turned off.
+    spec: "1.35 mm (+/- 0.20 mm) between lower side of presser foot #6A and needle plate, in Pivot position"
+    service_menu_path: "3. Adjust menu - A. Presser foot menu"
+    related_settings: []
+
+  - number: 18
+    title: "Needle threader stop"
+    page: 29
+    description: >
+      Check: the distance between the Cross head and the needle threader stop should be
+      1.5 mm (+0.5 mm). Adjustment: loosen screw (A) and move the needle threader stop
+      until the correct measure is obtained, then tighten screw (A).
+    spec: "1.5 mm (+0.5 mm) between Cross head and needle threader stop"
+    service_menu_path: null
+    related_settings: [13]
+
+  - number: 19
+    title: "Threading device"
+    page: 30
+    description: >
+      Check: insert a new #70 needle, bring the needle bar to its highest turning
+      position; the threader hook shall go smoothly into the needle eye (see fig 1 and
+      fig 2). Adjustment: loosen the two screws (A) on the back of the threader head
+      (C), move the white needle thread head (C) so the threader hook (D) does not
+      touch the inside of the needle eye, move the needle thread hook holder (B) so the
+      threader hook (D) does not touch the inside of the needle eye sideways, then
+      tighten the screws (A), always tightening the left screw first. NOTE: both
+      settings are adjusted at the same time.
+    spec: "Threader hook clears the inside of the needle eye in both planes"
+    service_menu_path: null
+    related_settings: [13]
+
+  - number: 20
+    title: "IDT linkage holder - Height and parallelism"
+    page: 31
+    description: >
+      Check: the distance between the linkage holder and the lower sewing head frame
+      should be 16.3 mm (+/- 0.2 mm) when the presser bar is in its lowest position.
+      NOTE: the adjustment can only be carried out when the machine is switched on in
+      the service program and the feed dog is dropped. Adjustment: loosen screw (A) to
+      move the linkage holder, insert gauge 63-102600-18/000 Spacer between the linkage
+      holder and the lower sewing head frame, press the linkage holder down against the
+      gauge to remove any play, then tighten screw (A). This setting affects setting 21
+      (adjustment of the IDT foot height and feeding position).
+    spec: "16.3 mm (+/- 0.2 mm) between linkage holder and lower sewing head frame"
+    service_menu_path: null
+    related_settings: [15, 21]
+
+  - number: 21
+    title: "Adjustment of the IDT foot - height and feeding position"
+    page: 32
+    description: >
+      Check of the height: put on presser foot #0A, engage the IDT, set stitch length to
+      6 mm and turn the hand wheel one full turn, lower the presser bar, turn the hand
+      wheel until the IDT foot is in its highest position -- the height distance between
+      the needle plate and IDT should be min. 2 mm. Check of feeding direction: with
+      stitch length 6 mm, turn the hand wheel one full turn in the sewing direction
+      until the rising feed dog teeth are flush with the needle plate surface, remove
+      presser foot #0A, lower the presser bar -- the front edge of the IDT foot must be
+      between the second and third tooth of the centre row of the feed dog. Adjustment
+      (both height and feeding direction adjusted at the same time): remove all covers
+      except the front cover, engage the IDT, set stitch length 6 mm, turn the hand
+      wheel one full turn then set the needle bar to its upper turning position, lower
+      the feed dog, fit IDT setting tool 413 14 17-01 with rails inside the needle plate
+      slot and in its most rear position, lower the presser bar so #0A is in the IDT
+      gauge slot, loosen the two set screws (A) and (B) of the IDT on the back of the
+      machine, make sure the edge of the IDT foot is against the setting gauge then
+      tighten set screw (A), push the metal part of the height linkage to its most upper
+      position without lifting the IDT foot (no play between the two height linkage
+      parts) then tighten set screw (B). Finally enter Service Program - 2. Sensor menu
+      - C. IDT menu, touch "Honeycomb" -- the machine sews a pre-programmed Honeycomb
+      stitch which should be 66-72 mm without IDT engaged, and +/-2 mm longer or shorter
+      with IDT engaged (e.g. without IDT = 66 mm, with IDT 64-68 mm).
+    spec: "Min. 2 mm height clearance at IDT's highest point; IDT foot edge between 2nd/3rd feed dog tooth; Honeycomb test stitch 66-72 mm without IDT, +/-2 mm with IDT engaged"
+    service_menu_path: "2. Sensor menu - C. IDT menu"
+    related_settings: [20]
+
+  - number: 22
+    title: "Setting the feed dog in relation to the needle plate"
+    page: 33
+    description: >
+      NOTE: the Hook Cover Cpl. must be mounted to carry out this check/adjustment.
+      Check: enter service program - 1. Set menu - D. Side motion menu, touch "Left" --
+      turn the hand wheel so the step motor changes between its two positions, the feed
+      dog should not at any point touch the needle plate; repeat for "Right". Adjustment:
+      remove the needle plate, loosen the screw (A) inside the hook cover, mount the
+      needle plate, touch "Left" in Side motion menu, insert a 0.10 mm feeler gauge
+      between the left side of the feed dog and the needle plate, push the feed dog left
+      against the gauge, carefully remove the needle plate without moving the feed dog,
+      tighten the torx six screw (A), mount the needle plate, then re-check both "Left"
+      and "Right" positions.
+    spec: "Feed dog never touches the needle plate at either Side motion extreme; 0.10 mm clearance set on the left side"
+    service_menu_path: "1. Set menu - D. Side motion menu"
+    related_settings: []
+
+  - number: 23
+    title: "Feed Dog Lowering"
+    page: 34
+    description: >
+      NOTE: first check that settings 9 (feed unit sideways) and 22 (feed dog in
+      relation to the needle plate) are correctly set before doing this adjustment.
+      Check: enter service program - 1. Set menu - D. Side motion menu, set the needle
+      bar to its highest position, touch "Drop" -- the feed dog should drop. Adjustment:
+      set the needle bar to its highest position, remove the feed dog lowering rod (E)
+      from its holder on the feed dog lowering device (A), make sure device (A) is at
+      its most left position and the feed dog is up, touch "Cal" in Side motion menu,
+      push the feed dog lowering rod (E) onto the feed dog lowering device (A), then
+      touch "Drop" -- the feed dog should now drop.
+    spec: "Feed dog drops fully when 'Drop' is touched"
+    service_menu_path: "1. Set menu - D. Side motion menu"
+    related_settings: [9, 22]
+
+  - number: 24
+    title: "Stitch length balance"
+    page: 35
+    description: >
+      Basic setting. Check 1: the feed dog should, after turning the main switch on and
+      off several times, always reach a position where a 2.5 mm straight stitch is
+      obtained. Check 2 (service program): enter 1. Set menu - B. Fabric feeder menu,
+      place dual-layer fabric under the presser foot, touch "0 Feed" -- the feed dog
+      shall NOT move the fabric when the foot control is pressed. Adjustment (requires
+      the feeding step motor unit removed from the machine; always check settings 22 and
+      25 are OK first): remove all covers, the base plate and the feeding step motor
+      unit; place the base with the power supply in front of the machine and connect it
+      to the PC-board; connect the front cover to the PC-board and place it on the
+      casting; loosen set screw (A); enter service program, touch "Cal" in Fabric feeder
+      menu; push the black cog segment (C) against the calibration stop (B); tighten
+      screw (A) and mark the screw's position; touch "Perform Cal." repeatedly to check
+      the step motor always returns to the same point; touch "Cal" again -- gap between
+      segment (C) and stop (B) should still be 0 mm and screw (A) aligned with the mark;
+      touch "1" -- the step motor takes one step away from the calibration stop.
+      Verify with a 0.4 mm feeler gauge (should NOT fit between segment C and stop B)
+      and a 0.2 mm feeler gauge (should fit). Fine adjustment of stitch length balance
+      uses the "Mechanical adjustment" stitch in 3. Adjust menu - B. Length balance menu
+      (mending-stitch squareness, adjusted via screw A with a shortened 4 mm Allen key),
+      followed by Electronic balance patterns 1-5 (each sewn forward and reverse,
+      measured, and the length entered back into the on-screen L(mm) fields in 1 mm
+      steps) which are then activated via "save settings" (or wiped with "clear
+      settings"). NOTE: the mending stitch in the balance menu is NOT compensated by
+      balance patterns 1-5; the mending stitch in the "Sew test" menu IS compensated by
+      the values in the balance menu.
+    spec: "2.5 mm straight stitch reproducibly obtained; 0-feeding gap verified with 0.2/0.4 mm feeler gauges"
+    service_menu_path: "1. Set menu - B. Fabric feeder menu; 3. Adjust menu - B. Length balance menu"
+    related_settings: [22, 25]
+
+  - number: 25
+    title: "Sidemotion balance"
+    page: 40
+    description: >
+      Check: setting 24 (stitch length balance) must already be set. Thread the machine
+      with regular polyester thread, use one layer of chinos + one layer of medium
+      tear-away stabilizer and presser foot "#8". Sew the machine (starting point min.
+      25 mm from the stabilizer's edges) -- the "SM Bear" test motif shall come out
+      according to the reference illustration. Adjustment: 3. Adjust menu - C. Side
+      balance menu; "+" adjusts side motion to the right, "-" adjusts side motion to the
+      left.
+    spec: "'SM Bear' test motif matches the reference illustration"
+    service_menu_path: "3. Adjust menu - C. Side balance menu"
+    related_settings: [24]
+
+  - number: 26
+    title: "Pre-setting of the step motor for the feed dog lowering"
+    page: 41
+    description: >
+      Check: enter service program - 1. Set menu - D. Side motion menu, touch "Drop" --
+      the feed dog should drop below the stitch plate; touch "Cal" -- while turning the
+      hand wheel the feed dog should now operate as normal. Adjustment: remove all
+      covers, the base plate, PC-board and side feeding step motor unit; mount the
+      PC-board with the side feeding step motor unit out; place the base with power
+      supply in front of the machine and connect to the PC-board; connect the front
+      cover to the PC-board; remove the black stop rubber (C) in the curve on the side
+      feeding unit; hold the side feeding unit in hand; loosen screw (A) on curve (B);
+      enter 1. Set menu - D. Side motion menu, touch "Cal"; place a 0.5 mm feeler gauge
+      between the side feeding frame and the feed dog lowering curve (B) to avoid the
+      curve resting against the frame; turn curve (B) until the side feeding pin (D) is
+      against the end position of the curve (E); tighten screw (A); remove the feeler
+      gauge; touch "Drop" (step motor takes the feed dog drop position); touch "Cal"
+      (step motor takes the feed dog calibration position -- NOTE this is NOT the same
+      as the setting position); turn the machine off, turn curve (B) by hand and check
+      it runs smoothly, mount the black stop (C), remove the PC-board, mount the side
+      feeding unit and PC-board, then set 20 (feed dog in relation to needle plate) and
+      21 (feed dog lowering).
+    spec: "Feed dog operates normally through full Drop/Cal cycle; 0.5 mm clearance set during curve adjustment"
+    service_menu_path: "1. Set menu - D. Side motion menu"
+    related_settings: [22, 23]
+
+  - number: 27
+    title: "Lower thread tension (thread tension of the bobbin case)"
+    page: 42
+    description: >
+      Check: insert a full bobbin into the bobbin case using normal polyester thread;
+      the thread tension spring of the bobbin case shall give a resistance of 19-21 g
+      when pulling the thread slowly. Adjustment: pull the thread slowly and turn screw
+      (A) until the correct thread tension is obtained. NOTE: remove any loose thread or
+      fluff from the tension discs before adjusting.
+    spec: "19-21 g pull resistance"
+    service_menu_path: null
+    related_settings: []
+
+  - number: 28
+    title: "Upper Thread tension - Factory setting"
+    page: 43
+    description: >
+      NOTE: mechanical adjustment shall always be checked/set before adjusting the
+      software Low/High tension settings; Factory setting "Start -1" and "Extra high"
+      should only be redone if the PC-board or mechanical tension parts have been
+      replaced. Mechanical adjustment check: correct thread balance should be obtained
+      on a satin stitch 0.7x7 mm. Adjustment: enter 3. Adjust menu - C. Tension menu (
+      note: the on-screen "Factory" button opens the Factory Tension sub-menu), activate
+      Mechanical adjustment via "Set", thread normal polyester thread through the upper
+      tension discs, pull the thread and turn screw (A) on the tension unit until it
+      reads 50 g (+/-2 g) on a tension gauge. "Tension Start -1" sets the zero (0)
+      tension point of the machine: with "Set Low" touched (presser foot goes to pivot
+      position, tension discs close), pull the thread slowly and touch "+" until a small
+      resistance is felt, then touch "-" once so the setting is one step below where
+      resistance was felt (adjustable -10 to +10, saved automatically). "Extra high"
+      sets the highest upper thread tension point: target is 150 g using a weight test
+      -- attach the thread to a 150 g weight, touch "Set Extra high", decrease tension
+      with "-" until the weight starts to move, then increase with "+" until the weight
+      stops moving (there are limits if "Sew Tension" is not 0). NOTE: remove any loose
+      thread/fluff from the tension discs before any adjustment.
+    spec: "Mechanical: 50 g (+/-2 g) on tension gauge; Extra High: 150 g weight test; Start -1: adjustable -10 to +10"
+    service_menu_path: "3. Adjust menu - D. Tension menu (Factory sub-menu)"
+    related_settings: [29, 30]
+
+  - number: 29
+    title: "Upper thread tension - Low and hight"
+    page: 45
+    description: >
+      Low and High Tension in the Tension menu set the low and high upper thread tension
+      used at normal sewing. Low Tension check: correct thread balance on a Satin stitch
+      0.7x7 mm using normal polyester upper and lower thread. Adjustment: 3. Adjust menu
+      - D. Tension menu, activate "Low" and stitch 1, sew a Satin stitch 0.7x7 mm with
+      presser foot #2A, adjust with +/- in "Set Low" (range -10 to +10 if High is 0;
+      otherwise the Low/High difference is limited to 10). High Tension check: correct
+      thread balance on a straight stitch 4x4 mm. Adjustment: activate "High" and stitch
+      1 (zigzag 4x4 mm) with presser foot #0A, adjust with +/- in "Set High" (range -10
+      to +10 if Low is 0). Both adjustments are saved automatically. NOTE: remove any
+      loose thread/fluff from the tension discs first.
+    spec: "Low: satin stitch 0.7x7mm balanced, range -10..+10; High: zigzag 4x4mm balanced, range -10..+10 (combined difference <=10)"
+    service_menu_path: "3. Adjust menu - D. Tension menu"
+    related_settings: [28]
+
+  - number: 30
+    title: "Setting the thread take-up spring"
+    page: 46
+    description: >
+      Check: the thread take-up spring should complete its movement when the lower part
+      of the needle eye reaches the fabric, checked at straight stitching with normal
+      cotton fabric and polyester thread. Adjustment: remove the tension cover on the
+      front cover, turn the thread tension body (A) with a screwdriver until correct
+      thread take-up is obtained. NOTE: this setting affects the function of the upper
+      thread guard (setting 31).
+    spec: "Take-up completes exactly as needle eye's lower edge reaches the fabric"
+    service_menu_path: null
+    related_settings: [31]
+
+  - number: 31
+    title: "Upper thread guard sensor"
+    page: 47
+    description: >
+      Check: enter service program, select 2. Sensor menu - A. Sensors 1 menu; the
+      function of the upper thread guard sensor is indicated by a square next to
+      "spring sensor" -- check that the square alternates between filled and not filled
+      when moving the thread take-up spring. NOTE: the setting of the thread take-up
+      spring (setting 30) affects the function of the upper thread sensor.
+    spec: "Sensor square toggles filled/unfilled through the full range of take-up spring travel"
+    service_menu_path: "2. Sensor menu - A. Sensors 1 menu"
+    related_settings: [30]
+
+  - number: 32
+    title: "Disconnection when winding the bobbin"
+    page: 48
+    description: >
+      Check: when winding the lower thread onto the bobbin, the machine should stop
+      when there is a min. of 1 mm between the edge of the bobbin and the thread.
+      Adjustment: loosen screw (A), move the disconnection lever (B) until the correct
+      amount of thread is obtained, tighten screw (A), then check by winding a bobbin.
+    spec: "Min. 1 mm between bobbin edge and wound thread when winding stops"
+    service_menu_path: null
+    related_settings: []
+
+service_program:
+  menus:
+    - number: 1
+      name: "Set menu"
+      submenus:
+        - letter: A
+          name: "Needle menu"
+          touch_areas:
+            - label: "Perform Cal."
+              description: "Checks the movement of the zig-zag step motor and centre position of the needle in straight stitching. The zig-zag step motor calibrates and takes its centre position."
+            - label: "Cal"
+              description: "Checks the calibration stop of the zig-zag step motor. The cog segment of the needle step motor takes its right calibration position."
+            - label: "Cal -1"
+              description: "Checks the calibration stop of the zig-zag step motor by attempting one further step to the left. If correct, needle will not move. If faulty, needle will take one step to the left or right."
+              check_procedure: null
+            - label: "Centre"
+              description: "Sets the centre position of the needle. The cog segment of the needle step motor goes to its centre position."
+            - label: "Left"
+              description: "Checks the calibration stop of the zig-zag step motor by attempting one step further. If correct, needle will take one step to the right. If faulty, needle will not move or will move left."
+            - label: "Right"
+              description: "Sets the end-stop position of the step motor for the needle. The cog segment of the needle step motor takes its left position."
+        - letter: B
+          name: "Fabric feeder menu"
+          touch_areas:
+            - label: "Perform Cal."
+              description: "The step motor calibrates."
+            - label: "Cal"
+              description: "The step motor takes its calibration position against the calibration stop."
+            - label: "1"
+              description: "Step motor moves one step away from the calibration stop."
+            - label: "0 Feed"
+              description: "Used when coarse-adjusting the stitch length balance. The feed dog should not move the fabric (0-feeding)."
+              check_procedure: "These touch buttons are used during setting 24 (Stitch length balance)."
+        - letter: C
+          name: "IDT menu"
+          touch_areas:
+            - label: "Adjust"
+              description: "Selects a 6 mm straight stitch."
+            - label: "Verification"
+              description: "Selects a honeycomb stitch, used for the IDT feeding-position verification in setting 21."
+        - letter: D
+          name: "Side motion menu"
+          touch_areas:
+            - label: "Perform Cal."
+              description: "The side feeding step motor calibrates and takes its right position."
+            - label: "Cal"
+              description: "The step motor takes its calibration position for feed dog drop."
+            - label: "Left"
+              description: "Feed dog takes its left position."
+            - label: "Right"
+              description: "Feed dog takes its right position."
+            - label: "Drop"
+              description: "Feed dog should drop down."
+        - letter: E
+          name: "Presser bar / Cutter menu"
+          touch_areas:
+            - label: "Perform Cal. (Presser bar)"
+              description: "Presser bar takes its highest position."
+            - label: "Sensor 1"
+              description: "Checks the presser foot's first sensor."
+            - label: "Sensor 2"
+              description: "Checks the presser foot's second sensor."
+            - label: "Position"
+              description: "Indicates the presser bar position in digits."
+            - label: "Perform Cal. (Cutter)"
+              description: "Thread cutter calibrates."
+            - label: "Step"
+              description: "Thread cutter moves one step at a time in the cutting sequence."
+            - label: "Arm sensor"
+              description: "Checks the cutter arm sensor."
+    - number: 2
+      name: "Sensor menu"
+      submenus:
+        - letter: A
+          name: "Sensors 1 menu"
+          touch_areas:
+            - label: "Sector forward"
+              description: "Synchronizer function, located on the right-hand side of the lower shaft. Checks the stop-right function in numbers (0-31)."
+              check_procedure: "In Sector forward, numbers 0 to 31 must appear when turning the hand wheel slowly in the sewing direction."
+            - label: "Arm shaft"
+              description: "Checks the armshaft's first and second sensors (stop-right function)."
+              check_procedure: "Squares should turn from black to white when turning the hand wheel slowly in the sewing direction."
+            - label: "Needle"
+              description: "Checks the needle position (stop-right function)."
+              check_procedure: "Square should turn from black to white when turning the hand wheel slowly in the sewing direction."
+            - label: "Motor current"
+              description: "Displays motor current as a bar."
+        - letter: B
+          name: "Sensors 2 menu"
+          touch_areas:
+            - label: "Buttonhole"
+              description: "Located on the sensormatic buttonhole foot. Buttonhole sensor check."
+              check_procedure: "Turn the black dial on the sensormatic buttonhole foot; the percent number should change 0-100."
+            - label: "Foot control"
+              description: "Located inside the foot control. Foot control sensor check."
+              check_procedure: "Push on the foot control; the percent number should increase 0-100."
+            - label: "Winding"
+              description: "The bobbin winding sensor -- indicates when the bobbin is fully wound."
+              check_procedure: "Remove the bobbin from the bobbin case, turn the hand wheel slowly to locate the position where the square changes black to white, place a full bobbin in the bobbin case and the square should activate. Alt check: remove the bobbin and run the machine -- it should stop and indicate bobbin empty."
+            - label: "Bobbin"
+              description: "Located in the hook cover, one sensor in the front right corner and one on the back left corner. Checks the lower thread guard indicator."
+              check_procedure: "Adjustment if faulty: clean the areas around the bobbin sensor; check the cable is correctly connected to the main PC-board."
+            - label: "Straight stitch plate"
+              description: "Sensor indicating a straight-stitch needle plate is fitted."
+            - label: "Knee lift"
+              description: "Knee lift sensor reading, shown as a bar."
+        - letter: C
+          name: "Hard keys menu"
+          touch_areas:
+            - label: "(all hard keys)"
+              description: "Checks the machine's function buttons."
+              check_procedure: "Push each button; a square should turn green in the Hard key button status menu."
+        - letter: D
+          name: "Electronics menu"
+          touch_areas:
+            - label: "Touch cal."
+              description: "Calibration of the touch display."
+            - label: "Display"
+              description: "A square pattern shall change between red, green and blue; the machine then automatically returns to the Electronics service menu."
+            - label: "Sound"
+              description: "Tests the speaker; a beep sound is played."
+            - label: "Status LEDs"
+              description: "Lights up the hard-key button LEDs."
+            - label: "Clear Memory - User settings"
+              description: "Removes all individual settings the customer has set in the Set Menu."
+            - label: "Clear Memory - User data"
+              description: "Removes all files saved by the customer."
+        - letter: E
+          name: "Timers & info menu"
+          touch_areas:
+            - label: "SW version"
+              description: "Shows the installed software release and build date."
+            - label: "On-Time"
+              description: "Indicates how many hours and minutes the machine has been switched on."
+            - label: "Sew-Time"
+              description: "Indicates how many hours and minutes the machine has been sewn on."
+    - number: 3
+      name: "Adjust menu"
+      submenus:
+        - letter: A
+          name: "Presser foot menu"
+          touch_areas:
+            - label: "Position"
+              description: "Indicates the presser foot position in digits."
+            - label: "Pivot -"
+              description: "Decreases the Pivot height."
+            - label: "Pivot +"
+              description: "Increases the Pivot height."
+            - label: "Needle plate position (Set)"
+              description: "Sets the electronic distance between the highest and lowest position of the presser bar; used during settings 16 (needle plate position) and 17 (pivot height)."
+        - letter: B
+          name: "Length balance menu"
+          touch_areas:
+            - label: "Balance warmup"
+              description: "Warms up the machine prior to setting feed balance."
+            - label: "Mechanical adjustments"
+              description: "Used for setting the mechanical mending-stitch feed balance (setting 24)."
+            - label: "Electronic adjustments - Clear"
+              description: "Clears the electronic feed balance adjustments from machine memory."
+            - label: "Electronic adjustments - Start"
+              description: "Enters the Electronic adjustments sub-menus (Balance Patterns 1-5, each sewn forward/reverse and measured back into the L(mm) fields)."
+        - letter: C
+          name: "Side balance menu"
+          touch_areas:
+            - label: "+ / -"
+              description: "Sets the correct side balance for the numbered presser foot shown (e.g. 'SM Bear 8' -- the number/letter refers to which presser foot must be fitted). Used for setting 25 (Sidemotion balance)."
+        - letter: D
+          name: "Tension menu"
+          touch_areas:
+            - label: "Sew tension Low (+/-)"
+              description: "Adjusts the LOW upper thread tension (decorative sewing), range -10 to +10 if High is 0, otherwise limited so the Low/High difference does not exceed 10."
+            - label: "Seam Selection - Low"
+              description: "Stitch 1 = satin stitch; Stitch 2 = buttonhole, used to verify Low tension."
+            - label: "Sew tension High (+/-)"
+              description: "Adjusts the HIGH upper thread tension (normal sewing), range -10 to +10 if Low is 0."
+            - label: "Seam Selection - High"
+              description: "Stitch 1 = zigzag stitch; Stitch 2 = straight stitch, used to verify High tension."
+            - label: "Factory"
+              description: "Opens the Factory Tension sub-menu (Mech. Adjustment / Set Tension Start -1 / Set Extra High) -- used for setting 28."
+        - letter: E
+          name: "Sew test menu"
+          touch_areas:
+            - label: "0.0x2.5 0A"
+              description: "Sews a straight stitch 2.5 mm (presser foot 0A)."
+            - label: "0.0x6.0 0A"
+              description: "Sews a straight stitch 6 mm (presser foot 0A)."
+            - label: "4.0x4.0 0A"
+              description: "Sews a zig-zag stitch 4x4 mm (presser foot 0A)."
+            - label: "9.0x12 0A"
+              description: "Sews a zig-zag stitch 9x12 mm (presser foot 0A)."
+            - label: "9.0x0.8 2A"
+              description: "Sews a satin stitch 9x0.8 mm (presser foot 2A)."
+            - label: "Banana 2A"
+              description: "Sews the Banana motif (presser foot 2A)."
+            - label: "Flower 2A"
+              description: "Sews the Flower motif (presser foot 2A)."
+            - label: "Crown 2A"
+              description: "Sews the Crown motif (presser foot 2A)."
+            - label: "H.Comb 1A"
+              description: "Sews the Honeycomb motif (presser foot 1A), used to verify IDT feeding in setting 21."
+            - label: "Dala 2A"
+              description: "Sews the Dala motif (presser foot 2A)."
+            - label: "Snowflake 8"
+              description: "Sews the Snowflake motif (presser foot 8)."
+            - label: "Deco Satin 8"
+              description: "Sews the Deco Satin motif (presser foot 8)."
+        - letter: F
+          name: "Cut sensor calibration"
+          touch_areas:
+            - label: "Activate sensor validation"
+              description: "Checkbox indicating sensor validation is active."
+            - label: "Sensor position (Set)"
+              description: "Runs the cut-sensor calibration wizard (setting 8): remove stitch plate, clean from lint, push fetcher to its most-left position, verify no room between fetcher and wall, confirm OK."
+
+disassembly:
+  - component: "Lid cover"
+    page: 60
+    tools_needed: []
+    dismantle_steps:
+      - "Lift up the handle."
+      - "From the back of the machine, flex the top cover lid upwards in the middle just enough that the pin on the left or right side is out of the top cover holder, then remove the lid."
+    mount_steps: []
+    settings_to_recheck: []
+
+  - component: "Thread Tension cover"
+    page: 60
+    tools_needed: []
+    dismantle_steps:
+      - "Push the cover down from the top (A)."
+      - "Carefully unhook the cover, then swing it straight up and out (B)."
+    mount_steps: []
+    settings_to_recheck: []
+
+  - component: "Decorative sewing head cover"
+    page: 60
+    tools_needed: ["Torx 10"]
+    dismantle_steps:
+      - "Remove the Torx 10 screw (A) from the top of the sewing head cover."
+      - "Unhook clip (B) located on the outside at the front."
+      - "Unhook clip (C) located on the inside front side."
+      - "Unhook clip (D) located on the inside backside."
+      - "Remove the decorative sewing head cover straight to the left."
+    mount_steps: []
+    settings_to_recheck: []
+
+  - component: "Top cover"
+    page: 61
+    tools_needed: ["Torx 20"]
+    dismantle_steps:
+      - "Remove the two Torx 20 screws of the top cover (A)."
+      - "Lift the top cover upwards at the tension cover area (B) to remove it."
+    mount_steps: []
+    settings_to_recheck: []
+
+  - component: "Front sewing head cover"
+    page: 61
+    tools_needed: []
+    dismantle_steps:
+      - "Remove the two screws (A) from the back side."
+      - "Remove the front sewing head cover."
+    mount_steps: []
+    settings_to_recheck: []
+
+  - component: "Rear cover and Motor cover"
+    page: 62
+    tools_needed: []
+    dismantle_steps:
+      - "Remove the hand wheel."
+      - "Remove the two screws (A) and the screw (B) located under the handle."
+      - "Remove the two screws on the rear cover (C)."
+      - "Lay the machine down, front facing up, and remove the three screws (D)."
+      - "Lift the machine up again."
+      - "Remove the motor cover by firmly gripping (A) and cautiously pulling it out to the left, then remove the back cover by cautiously pulling at (B) out a bit."
+    mount_steps: []
+    settings_to_recheck: []
+
+  - component: "Front cover"
+    page: 64
+    tools_needed: []
+    dismantle_steps:
+      - "NOTE: always use a wrist band and ESD mat when removing the front cover."
+      - "Disconnect the cable for the LED front cover (A), located on the connector board at the back of the machine."
+      - "Lay the machine down, front facing up. Remove the two screws (B)."
+      - "Remove the two screws (C) and (D)."
+      - "Lift the machine up again."
+      - "Remove the front cover by cautiously lifting it up so guide (F) passes over the edge of the bottom cover, then pull the front cover straight out."
+      - "Disconnect the cable from the USB board and the cable from the Base board (note how they are connected before disconnecting -- they must be reconnected the same way)."
+    mount_steps: []
+    settings_to_recheck: []
+
+  - component: "Display"
+    page: 66
+    tools_needed: ["Torx 10"]
+    dismantle_steps:
+      - "Remove all covers."
+      - "Remove the application board."
+      - "Remove the two Torx 10 screws (A)."
+      - "Lift out the frame (B) and the display (C) from the front cover."
+    mount_steps: ["Mount in reverse order."]
+    settings_to_recheck: []
+
+  - component: "Touch panel and keyboard"
+    page: 66
+    tools_needed: []
+    dismantle_steps:
+      - "NOTE: touch panel and keyboard have to be changed as a unit."
+      - "Remove all covers."
+      - "Remove the application board."
+      - "Remove the display."
+      - "Remove the touch panel and the keyboard."
+    mount_steps: ["Mount in reverse order."]
+    settings_to_recheck: []
+
+  - component: "Power supply"
+    page: 67
+    tools_needed: ["Torx 20"]
+    dismantle_steps:
+      - "FOR SAFETY REASONS ALWAYS DISCONNECT THE MAIN POWER CORD before removing the power supply."
+      - "Remove all covers."
+      - "Disconnect the power supply cable from the PC-board."
+      - "Lay the machine down, front facing up."
+      - "Remove the two Torx 20 screws (A), holding the power supply with one hand when removing the last screw."
+      - "Push the power supply to the left and remove it."
+    mount_steps:
+      - "Push the power supply into position."
+      - "Mount the first Torx 20 screw (A), still holding the power supply with one hand for easier mounting."
+      - "Mount the second Torx 20 screw (A), using one hand to fixate the power supply."
+      - "Connect the power supply cable to the PC-board."
+      - "Mount the covers."
+    settings_to_recheck: []
+
+  - component: "Base board (Main PC-board)"
+    page: 68
+    tools_needed: []
+    dismantle_steps:
+      - "FOR SAFETY REASONS always disconnect the main power cord before removing the circuit board, and use wrist band and ESD mat."
+      - "Remove all covers."
+      - "Remove the 3 screws (A) and the screw (B) holding the circuit board."
+      - "Loosen the cables from the circuit board (connector map): (21) Power supply unit-Black, (22) Bobbin winding sensor-White, (23) Synchronizer card-Red, (33) Front Cover connection-Black, (42) Feed unit motor-White, (43) Embroidery unit-White, (44) Embroidery unit-Blue, (45) Thread cutter motor-White, (46) Sewing head unit-Red, (47) Thread tension motor-Blue, (51) Motor-Black, (56) Stitch plate sensor-Black, (61) Thread cutter sensor-White, (62) Knee lift sensor-Black, (64) Bobbin sensor-Red. Connectors (31),(32),(41),(63),(67),(71),(72) are NOT IN USE."
+      - "Lift the board away from the machine, always holding the PC-board by the edges."
+      - "Place the PC-board in an ESD bag."
+    mount_steps:
+      - "If the Main PC-board is replaced: the firmware must ALWAYS be updated to the latest version; the touch panel must be calibrated; the sewing head's Pivot height must be set; the sewing head's Needle plate position must be set; the upper thread tension must be set (Factory Extra High Tension and Start tension 1, then High tension and Low tension); the machine serial number must be set."
+    settings_to_recheck: [16, 17, 28, 29]
+
+  - component: "Application board"
+    page: 69
+    tools_needed: []
+    dismantle_steps:
+      - "ALWAYS use wrist band and ESD mat when removing the application board."
+      - "Remove the 2 screws holding the application board."
+      - "Loosen the cables from the application board (connector map): (1) Base board-Black, (2) USB board-Black, (3) Display-White, (5) Reverse button-Red, (6) Loud speaker-White, (8) Key board-Brown, (9) Touch panel-Brown. Connectors (4) and (7) are NOT IN USE."
+      - "Lift away the application board, always holding it by the edges."
+      - "Place the application board in an ESD bag."
+    mount_steps:
+      - "If the application board is replaced: it ships without software and must always be updated with the latest software version; the touch panel must be calibrated; the sewing head's Pivot height must be set; the sewing head's Needle plate position must be set; the cut sensor must be calibrated; the upper thread tension must be set (Factory Extra High Tension and Start tension 1, then High tension and Low tension)."
+    settings_to_recheck: [8, 16, 17, 28, 29]
+
+  - component: "Base Plate"
+    page: 70
+    tools_needed: []
+    dismantle_steps:
+      - "FOR SAFETY REASONS always disconnect the main power cord before removing the power supply."
+      - "Remove all the covers."
+      - "Disconnect the power supply cable from the PC-board."
+      - "Remove the 3 screws (A) for the base plate."
+      - "Remove the base plate."
+    mount_steps: ["Mount in reverse order."]
+    settings_to_recheck: []
+
+  - component: "Tension unit"
+    page: 71
+    tools_needed: ["Torx 20", "Torx 10"]
+    dismantle_steps:
+      - "Remove all covers."
+      - "Place the needle bar in its lowest turning position using the hand wheel."
+      - "Remove the tension unit cable (blue) from the PC-board and its fastening points."
+      - "Remove two Torx 20 screws, one from the front and one from the back (A)."
+      - "Remove one Torx 10 screw from the top (B)."
+      - "Remove the tension unit."
+    mount_steps:
+      - "Mount one Torx 10 screw from the top (B)."
+      - "Mount two Torx 20 screws, one from the front and one from the back (A)."
+      - "Mount the cable to the PC-board and its fastening points."
+      - "Mount all covers."
+    settings_to_recheck: [28, 29]
+
+  - component: "Sewing head"
+    page: 72
+    tools_needed: ["2.5 mm Allen key", "Torx 8", "Torx 20"]
+    dismantle_steps:
+      - "Remove all covers."
+      - "Remove the tension unit."
+      - "Remove the presser foot holder and the needle."
+      - "Disconnect the power cable from the sewing head's connector board."
+      - "Disconnect the cable from the right LED light."
+      - "Remove the cable protection on the back of the machine."
+      - "Loosen the 2.5 mm Allen key screw (B) and remove both the wedge (D) and the screw (B) by pushing them downwards."
+      - "Loosen the Torx 8 screw (G) of the lower lever connecting the IDT to the sewing head."
+      - "Loosen the Torx 8 screw (H) of the upper connection of the IDT to the sewing head."
+      - "Set the thread take-up lever to its lowest position and remove the Torx 20 screw (C) that holds the sewing head."
+      - "Lift the sewing head a little from the sewing machine casting."
+      - "Unhook the sewing head from the stud (E) of the thread take-up lever, then lift the sewing head up and unhook the connecting rod (F)."
+      - "Push both the upper and lower IDT connecting levers to the left to remove them from their shafts, then lift the sewing head out of the machine."
+    mount_steps:
+      - "Connect the crosshead tab to the arm shaft's link (F)."
+      - "Connect both the upper and lower IDT levers."
+      - "Connect the stud (E) of the thread take-up lever."
+      - "Mount the Torx 20 screw (C) and tighten firmly."
+      - "Mount the wedge (D) and the screw (B) together in the slot between the sewing head and the casting."
+      - "Tighten the 2.5 mm Allen key screw (B)."
+      - "Mount the cable protection on the back of the machine."
+      - "Connect the right LED cable."
+      - "Connect the sewing head power cable from the Main PC-board to the sewing head connector board on the left side of the sewing head."
+      - "Mount the tension unit."
+    settings_to_recheck: [5, 21]
+
+  - component: "Sewing head re-building (swapping the whole head unit)"
+    page: 73
+    tools_needed: ["Torx 10", "Torx 8", "Torx 6", "Torx 20"]
+    dismantle_steps:
+      - "Remove the sewing head from the machine (see 'Sewing head' procedure)."
+      - "Disconnect all LED cables from the connecting card; remove the 2 Torx 10 screws (A) holding the LED lights; remove both LED lights (B)."
+      - "Disconnect the Zigzag and presser bar step motor cables from the connecting card."
+      - "Disconnect the buttonhole sensor cable; remove the Torx 6 screw (C) holding the buttonhole sensor; remove the buttonhole sensor (D) (to be mounted onto the replacement sewing head)."
+      - "Remove the 2 Torx 10 screws (E) holding the presser bar unit; remove the presser bar unit (F); remove the large presser bar cog wheel (G), small cog wheel (H), and pin (I)."
+      - "Loosen the screw that holds the p-bar shield (J); remove the p-bar shield (J)."
+      - "Remove the outer C-clip (K) holding the thread take-up (L); remove the thread take-up (L) (note the flat washer and wave washer on the thread take-up shaft)."
+      - "To remove the presser bar (R): loosen the presser bar's Torx 8 set screw (M) and the IDT connecting bracket's Torx 8 screw (A); remove the presser bar; unhook the presser bar spring (N) from the presser bar connecting lever pin (Q); remove the presser bar connecting bracket (O)."
+      - "Check the presser bar moves up and down freely."
+      - "Remove the 2 Torx 10 screws (S) holding the Zigzag step motor; remove the Zigzag step motor (T); remove the Zigzag calibration stop Torx 10 screw (U) and calibration stop (V)."
+      - "Pull the needle bar to its down position; note the distance between the needle bar's top and the frame (AA); loosen the crosshead's Torx 10 screw (Y); loosen the needle thread stop's Torx 10 screw (Z); remove the needle bar by pulling it down."
+    mount_steps:
+      - "Place the spring (N) on the replacement sewing head's presser bar connecting bracket pin (P) and hook it onto the presser bar lever pin (Q)."
+      - "Mount the presser bar (R) in the replacement sewing head, pushing it up just a little; put on the IDT unit and push the presser bar up through the IDT connecting bracket; push through the presser bar connecting bracket (O); align the mark on the presser bar with the set-screw holes on both the presser bar set screw (M) and the IDT connecting bracket screw (A) before tightening, without moving the presser bar from its position."
+      - "Place the Zigzag calibration stop (V) in the replacement sewing head with the eccentricity on top; hold it with a finger and mount the Torx 10 screw (U)."
+      - "Mount the pin (I), small presser bar cog wheel (H, smaller part to the top), and large cog wheel (G) onto the large cog wheel's pin (X) -- NOTE this pin may be missing and need to be retrieved from the old sewing head; the 3 cog wheels should now be connected."
+      - "Place the presser bar unit (F) on the replacement sewing head, connect the large cog wheel (G) to the presser bar lever (O), mount the 2 Torx 10 screws (E), mount the presser bar sensor shield (J) inside the sensor, tighten the Torx 20 screw."
+      - "Take the replacement sewing head and mount the needle bar, pushing it up a bit; mount the cross head and needle threader stop, pre-set with the cross head against the base and the needle bar's top at the small distance (AA) shown; tighten cross head screw (Y); before tightening the needle thread stop screw (Z), make a 1.5 mm distance between the needle threader stop and the cross head."
+      - "Mount the presser foot holder and presser foot; put in a new #90 needle; set the needle to centre position against the presser foot by hand."
+      - "Mount the Zigzag step motor (T) with the cogwheel's setting screw (BB) in the middle when viewed from the side of the sewing head; the needle should still be centred against the presser foot; mount the 2 screws (S)."
+      - "Mount both LED lights (B), fasten with screws (A); connect all cables."
+      - "Mount the inner C-clip holding the thread take-up in position (measure the distance on the old sewing head); mount a straight metal washer, the thread take-up, a metal wave washer, then the C-clip from the old sewing head onto the replacement head (should have no play but move freely). NOTE: when the thread tension unit is mounted, the thread take-up must be centred in the thread take-up window."
+      - "Mount the sewing head on the machine (see 'Sewing head' procedure)."
+    settings_to_recheck: [5, 10, 12, 13, 15, 18, 19, 20]
+
+  - component: "Step motor of the needle (Zig-Zag)"
+    page: 76
+    tools_needed: []
+    dismantle_steps:
+      - "NOTE: the sewing head should remain in the machine when changing the needle step motor."
+      - "Remove the lid cover, top cover and face cover."
+      - "Disconnect the step motor cable from the sewing head's connecting board."
+      - "Remove the step motor by removing the 2 screws (A)."
+    mount_steps:
+      - "Mount a #0A foot and a new #90 needle; manually set the needle against the #0A foot to its centre position."
+      - "On the step motor, position the cogwheel (B) so screw (C) points to the left side of the sewing head."
+      - "Mount the step motor, keeping the needle centred against the #0A foot; enter screw (A) and tighten."
+      - "Connect the step motor cable to the sewing head's connecting board."
+      - "Loosen screw (C) on the cogwheel (B); enter the service program; turn screw (C) on cogwheel (B) until the needle is centred in the #0A foot while screw (C) still points left; tighten screw (C)."
+      - "Calibrate the step motor: press Calibrate in the Needle submenu repeatedly -- the needle shall always return to centre position of the #0A foot."
+    settings_to_recheck: [12]
+
+  - component: "Step motor of the Presser bar"
+    page: 77
+    tools_needed: []
+    dismantle_steps:
+      - "NOTE: the sewing head can remain in the machine when changing the presser bar step motor."
+      - "Remove the lid, top cover and face cover."
+      - "Disconnect the step motor cable from the sewing head's connecting board."
+      - "Remove the step motor by removing the two screws (A)."
+    mount_steps:
+      - "Connect the step motor cable to the sewing head's connecting board."
+      - "Mount the step motor and tighten the two screws (A)."
+    settings_to_recheck: []
+
+  - component: "Presser bar bushing"
+    page: 78
+    tools_needed: ["Torx 8", "angled Torx 10"]
+    dismantle_steps:
+      - "NOTE: the sewing head must be removed from the machine when replacing the presser bar bushing."
+      - "Remove all covers, the thread tension unit, and the sewing head from the machine."
+      - "Remove the presser foot holder."
+      - "Loosen the two Torx 8 screws (A) and pull the shaft up a bit, tightening the screws VERY lightly so as not to make extra marks on the presser bar."
+      - "Using an angled Torx 10 screwdriver, just loosen screw (B) -- do not remove the screw or clamp."
+      - "Push the bushing clamp to the right and remove the bushing."
+    mount_steps:
+      - "Place the presser bar bushing in the sewing head."
+      - "Push the bushing holder back so it's on top of the bushing and tighten the Torx 10 screw (B) lightly, making sure the clamp is positioned correctly on top of the bushing and in the lower positioning."
+      - "Open the two Torx 8 screws (A); push down the presser bar and make sure it moves smoothly up and down; tighten the Torx 10 screw (B) firmly, then re-check smooth movement."
+      - "To pre-set the presser bar: remove the two Torx 8 screws (A); locate the previous mark from the screws on the shaft and align the screw holes with it; re-enter and tighten the screws."
+      - "Mount the sewing head in the machine."
+    settings_to_recheck: [5, 15, 16, 20]
+
+  - component: "Needle bar bushing"
+    page: 79
+    tools_needed: []
+    dismantle_steps:
+      - "Remove all covers, the thread tension unit, and the sewing head from the machine."
+      - "Remove the presser foot holder."
+      - "Loosen screws (A, B)."
+      - "Pull the needle bar down a bit and remove the needle thread stop (C) and the cross head (D)."
+      - "Pull the needle bar side to side so the bearing holder un-snaps, to remove the needle bar bushing."
+      - "Remove the needle bar, bushing and bushing holder."
+      - "Remove the bushing and holder from the needle bar."
+    mount_steps:
+      - "Place the bushing holder on the bushing."
+      - "Mount the bushing holder and bushing on the needle bar, with the bushing on top."
+      - "Push the needle bar all the way in; use a small screwdriver to snap in the bushing holder (the holder has two tabs (E) that should sit side to side when viewed from the front of the sewing head)."
+      - "Pull the needle bar down a bit and mount the cross head and needle thread stop; pre-position both and tighten the screw just lightly."
+      - "Mount the sewing head in the machine."
+      - "Check setting 10 (height of the hook)."
+    settings_to_recheck: [10, 13, 14, 18, 19]
+
+  - component: "Arm shaft"
+    page: 80
+    tools_needed: []
+    dismantle_steps:
+      - "FOR SAFETY REASONS always disconnect the main power cord, use wrist band and ESD mat."
+      - "Remove all covers."
+      - "Remove the tension unit."
+      - "Remove the bobbin winder."
+      - "Remove the PC-board."
+      - "Un-hook the motor belt from the arm shaft."
+      - "Remove the two screws (A) and the clamps."
+      - "Push the eccentric bearing upwards to loosen the belt tension."
+      - "Lift the arm shaft a bit and pull it towards the right through the drive belt, while at the same time disconnecting the thread take-up and the cross head."
+    mount_steps:
+      - "Make sure the rubber inserts are positioned at the bearing holders on the casting."
+      - "Enter the arm shaft through the drive belt."
+      - "Connect the sewing head's crosshead tab to the arm shaft's link hole."
+      - "Connect the thread take-up lever to the arm shaft's stud."
+      - "Place the drive belt on the arm shaft's cog wheel."
+      - "Place the arm shaft's bearings into the bearing holders in the casting. NOTE: make sure the eccentric bearing's hole is at the front."
+      - "Fold up the rubber inserts and place the clamps on top; mount the two screws (A)."
+      - "Disconnect the upper and lower shaft by loosening the three screws on the arm shaft's cog wheel, then hook on the motor belt."
+    settings_to_recheck: [1, 14]
+
+  - component: "Hook cover compl."
+    page: 81
+    tools_needed: ["Torx 10"]
+    dismantle_steps:
+      - "Remove all covers."
+      - "Remove the power supply."
+      - "Remove the screw (C); remove and cut the ziptie."
+      - "Remove the cable bobbin sensor from the PC-board and its fastening points."
+      - "Raise the presser bar to its highest position; remove the needle; remove the presser foot holder."
+      - "Remove the needle plate by placing a screwdriver at (A) and snapping it off."
+      - "Remove the bobbin window, then the bobbin basket holder and the bobbin basket."
+      - "Remove the four screws (B) on the hook cover."
+      - "Remove the hook cover; pull the bar (E) out from the cutter step motor unit."
+    mount_steps:
+      - "Push the bar (E) into position in the cutter step motor unit."
+      - "On the left side of the casting's free arm are two black setting pins -- place the hook cover openings on top of these."
+      - "Mount all four Torx 10 screws that hold the hook cover in position but do not tighten yet; the hook cover must remain movable front-to-back. NOTE: the ESD washer should be positioned on the right-hand front side."
+      - "Mount the bobbin basket, bobbin basket holder and the needle plate; insert a new size-90 needle; put the #0A foot on and centre the needle by hand; remove the #0A foot; turn the hand wheel so the needle eye is just above the needle plate."
+      - "Set the hook cover in relation to the needle in the feeding direction: with the needle centred (viewed from the side), move the hook cover until the needle is centred; tighten the two left-hand screws first, always holding the cover with one hand while tightening the first screw."
+      - "Turn the hand wheel so the needle is in its upper turning position, remove the needle plate, tighten the two right-hand screws."
+      - "Mount the needle plate; turn the hand wheel so the needle enters the needle hole and re-check the setting -- the needle should still be centred viewed from the side."
+      - "Mount the cable and attach it to the PC-board; mount a new ziptie; mount the screw (C)."
+    settings_to_recheck: [10]
+
+  - component: "Replace thread cutter knife"
+    page: 82
+    tools_needed: []
+    dismantle_steps:
+      - "Remove the needle plate."
+      - "Enter the service program; in the Motors menu, 'thread cutter' sub-menu, touch 'Step cut' once -- the cutter goes to its thread-knife change position."
+      - "Turn the knife holder (B) to a straight-up position, then remove it by pushing towards the back of the machine."
+      - "Remove the knife from the holder by pulling it straight out (use nose pliers as an aid)."
+    mount_steps:
+      - "Mount the new knife by pushing it into the holder (use nose pliers as an aid)."
+      - "Mount the knife holder in the hook cover, positioned so the knife edge faces the needle."
+      - "Touch the thread cutter sub-menu button 'Reset Cut' -- the thread cutter returns to its starting point."
+      - "Mount the needle plate."
+    settings_to_recheck: []
+
+  - component: "Thread cutting unit"
+    page: 83
+    tools_needed: ["Torx 20"]
+    dismantle_steps:
+      - "Remove all covers."
+      - "Remove the power supply."
+      - "Remove cables: thread cut, bobbin sensor and cut sensor, from the PC-board, releasing them from their fastening points."
+      - "Remove the hook cover."
+      - "Remove the two Torx 20 screws (A) holding the stepper motor."
+      - "Take out the unit."
+    mount_steps:
+      - "Mount the unit."
+      - "Mount the two Torx 20 screws (A)."
+      - "Reattach the cables to their fastening points and to the PC-board."
+      - "Mount the power supply and all covers."
+      - "NOTE: if the thread-cutting sensor is adjusted/replaced, make sure the arm (D) runs freely through the sensor (E)."
+    settings_to_recheck: [8]
+
+  - component: "Hook compl."
+    page: 84
+    tools_needed: ["2 mm Allen key"]
+    dismantle_steps:
+      - "Remove all covers."
+      - "Remove the hook cover."
+      - "Loosen the 2 mm Allen screw (B) and lift out the complete hook together with the dust cover. NOTE: the hook can be dismantled without removing the feeding unit."
+    mount_steps:
+      - "Turn the hand wheel so the setting pin of the worm gear is positioned per fig 1 (1.5 mm from the top of the frame opening)."
+      - "Place the spring on the hook shaft, then place the dust cover on the shaft, straight backwards, with the hook tip to the left. NOTE: a pin on the back of the dust cover must be positioned before the hook shaft is positioned."
+      - "Lift the feed dog to gain access and slide the dust cover and hook into place."
+      - "Press down the hook shaft -- the hook will rotate clockwise to the correct position with the tip (A) pointing straight backwards."
+      - "Check the spring pushes the hook upwards; press the hook down and tighten screw (B)."
+      - "Mount the hook cover."
+    settings_to_recheck: [3, 5, 7, 10, 11, 14]
+
+  - component: "Feed dog drop mechanism complete"
+    page: 85
+    tools_needed: ["Torx 20"]
+    dismantle_steps:
+      - "Remove all covers."
+      - "Remove the PC-board."
+      - "Disconnect and remove the feed dog lowering rod (D)."
+      - "Remove the two Torx 20 screws (E) and remove the linkage connection (F)."
+      - "Remove the linkage (G) by moving it to the front and un-hooking it from the feed dog lowering."
+      - "Remove the 4 screws (H) and remove the feed dog drop mechanism."
+    mount_steps:
+      - "Mount the feed dog drop mechanism."
+      - "Mount the linkage (G) and connect it to the linkage connection (F)."
+      - "Mount the linkage connection (F) and the two Torx 20 screws."
+      - "Mount the PC-board."
+      - "Mount the feed dog lowering rod (D)."
+    settings_to_recheck: [11]
+
+  - component: "Feed dog drop mechanism step motor"
+    page: 86
+    tools_needed: []
+    dismantle_steps:
+      - "Remove all covers and the base plate."
+      - "Remove the PC-board."
+      - "Remove the feed dog drop mechanism complete."
+      - "Remove the cogwheel by removing the screw (A)."
+      - "Remove the step motor by removing the 2 screws (B)."
+    mount_steps: ["Mount in reverse order."]
+    settings_to_recheck: [23, 26]
+
+  - component: "Feeding unit step motor"
+    page: 87
+    tools_needed: ["4 mm Allen key", "Torx 20"]
+    dismantle_steps:
+      - "Remove all covers."
+      - "Remove the Main PC-board."
+      - "Remove the base plate."
+      - "Remove the feed dog lowering linkage."
+      - "Remove the holder from the IDT linkage."
+      - "Remove the two Torx 20 screws that hold the lower IDT linkage."
+      - "Remove the lower IDT linkage."
+      - "Bring the step motor cable out to the back side."
+      - "For easier mounting later, measure and note the distance between the upper part of the step motor frame (A) and the casting (B) -- this may differ from machine to machine."
+      - "Use a 4 mm Allen key to remove the feed adjusting screw (C)."
+      - "Remove the nut and the spring."
+      - "Remove the reverse-threaded Torx 20 screw on the back side of the step motor."
+      - "Un-hook the feed dog carrier spring."
+      - "Push the feed unit to its most front position."
+      - "Remove the feed dog step motor unit by lifting it a little to the right and then out."
+    mount_steps:
+      - "Always check or set the step motor's zero feeding position before mounting it."
+      - "Take the cable from the step motor and route it through the casting."
+      - "The concave-shaped guide block follower should go onto the guide block, with the flat side of the guide block facing the lower side of the machine."
+      - "Before mounting, check or set setting 24 (Stitch length balance, basic setting)."
+      - "Enter the step motor and connect the guide block and guide block follower."
+      - "Mount the reverse-threaded Torx 20 screw and tighten firmly."
+      - "Mount the feed dog carrier spring."
+      - "Push up the step motor."
+      - "Place the spring then the 4 mm adjusting screw and nut on top."
+      - "Turn the 4 mm adjusting screw to obtain the distance measured previously."
+      - "Route the step motor cable into the cable guides on the backside, then through the opening in the casting, and connect it to the PC-board. NOTE: use ESD mat and wrist band."
+    settings_to_recheck: [23, 24]
+
+  - component: "Feeding unit"
+    page: 88
+    tools_needed: []
+    dismantle_steps:
+      - "Remove all covers."
+      - "Remove the hook cover."
+      - "Remove the hook complete."
+      - "Remove the feed step motor."
+      - "Remove the feed dog lowering rod."
+      - "Remove the two screws (A)."
+      - "Lift out the complete feed unit."
+    mount_steps:
+      - "Set the feeding eccentric straight backwards."
+      - "Insert the feed unit and tighten the two screws (B) lightly."
+      - "Mount the feeding step motor and base plate."
+      - "Mount the hook and hook cover."
+      - "Mount the presser foot and the presser foot holder."
+      - "Set the feed unit sideways and tighten screws (B)."
+    settings_to_recheck: [3, 4, 5, 7, 9, 10, 11, 13, 14, 24]
+
+  - component: "The side feeding mechanism complete"
+    page: 89
+    tools_needed: ["Torx 20"]
+    dismantle_steps:
+      - "Remove all covers."
+      - "Remove the PC-board."
+      - "Disconnect the bar (C) from the side feeding mechanism by removing the screw (A) and the clip (B)."
+      - "Disconnect and remove the feed dog lowering rod (D)."
+      - "Remove the two Torx 20 screws (E) and remove the linkage connection (F)."
+      - "Remove the linkage (G) by moving it forward and un-hooking it from the side feeding."
+      - "Remove the 4 screws (H) and remove the side feeding mechanism."
+    mount_steps:
+      - "Mount the side feeding mechanism."
+      - "Connect the draw bar (C) from the side feeding mechanism with the screw (A) and the clip (B)."
+      - "Mount the linkage (G) and connect it to the linkage connection (F)."
+      - "Mount the linkage connection (F) and the two Torx 20 screws."
+      - "Mount the PC-board."
+      - "Mount the feed dog lowering rod (D)."
+    settings_to_recheck: [22, 23, 24, 25]
+
+  - component: "The side feeding mechanism step motor"
+    page: 90
+    tools_needed: []
+    dismantle_steps:
+      - "Remove all covers and the base plate."
+      - "Remove the PC-board."
+      - "Remove the side feed mechanism complete."
+      - "Remove the cogwheel by removing the screw (A)."
+      - "Remove the step motor by removing the 2 screws (B)."
+    mount_steps: ["Mount in reverse order."]
+    settings_to_recheck: [22, 23, 24, 25, 26]
+
+  - component: "Lower Shaft"
+    page: 91
+    tools_needed: ["Torx 20"]
+    dismantle_steps:
+      - "FOR SAFETY REASONS always disconnect the main power cord before removing the circuit board; use wrist band and ESD mat."
+      - "Remove the rear cover and front cover."
+      - "Remove the base plate."
+      - "Remove the feed step motor unit."
+      - "Remove the feed unit."
+      - "Remove the Main PC-board."
+      - "Remove the feed dog drop unit."
+      - "Remove the Synchronizer card holder."
+      - "Remove the Synchronizer wheel from the lower shaft."
+      - "Push the drive belt off the lower shaft's cog wheel."
+      - "Remove the two screws and the clamps that hold the upper IDT shaft in position."
+      - "Remove the two screws and the clamps that hold the lower shaft in position."
+      - "Push up the IDT linkage and lift up the lower shaft a bit, then remove it towards the right of the machine."
+    mount_steps:
+      - "Before mounting the lower shaft, make sure to open the screws on the arm shaft's cog wheel."
+      - "Place the lower shaft in the machine; make sure the eccentric bearing's hole is on the lower half."
+      - "Place the clamps on the bearings and tighten with the two Torx 20 screws."
+      - "Mount the upper IDT shaft."
+      - "Push the main belt onto the lower shaft's cog wheel."
+      - "Mount the Synchronizer wheel -- it should snap onto the long-sided pin on the lower shaft."
+      - "Mount the Synchronizer card holder."
+      - "Mount the feed dog drop unit."
+      - "Mount the Main PC-board."
+      - "Mount the feed unit."
+      - "Mount the feed step motor unit -- always check setting 26 (pre-setting of the feed step motor) before mounting."
+      - "Mount the base plate."
+    settings_to_recheck: [1, 3, 4, 5, 7, 9, 10, 11, 13, 14, 24, 26]
+
+  - component: "Bobbin winding device"
+    page: 92
+    tools_needed: ["Torx 10"]
+    dismantle_steps:
+      - "NOTE: needle and feeding movement should be disengaged when the bobbin winding stop shaft is pushed to its winding position."
+      - "Remove all covers."
+      - "Disconnect the two cables from the Main PC-board."
+      - "Remove the two Torx 10 screws (A) that hold the bobbin winding device, then remove it."
+      - "Remove the bobbin winding spindle (use a flat screwdriver as an aid)."
+      - "Remove the two Torx 10 screws (A) of the motor."
+      - "Remove the motor."
+    mount_steps: ["Mount in reverse order."]
+    settings_to_recheck: []
+
+fault_finding:
+  - symptom: "The machine does not work when the foot control is pressed, but works when pushing the start button."
+    checks:
+      - "Check that the contact of the cord device of the cord is correctly pushed into the potentiometer."
+      - "Check by means of a new foot control (potentiometer, cord device)."
+      - "Try a new transformer."
+    replace_order: []
+    notes: null
+
+  - symptom: "The machine does not start when either foot control or start button is pressed."
+    checks:
+      - "Check that the bobbin stop sensor is not activated."
+      - "Try a new motor."
+      - "Try a new circuit board."
+    replace_order: ["motor", "circuit board"]
+    notes: null
+
+  - symptom: "The machine races when switched on or started."
+    checks:
+      - "Check that the start button does not stay pressed."
+      - "If the machine only races when the foot control is connected, then check the foot control."
+      - "Try a new circuit board."
+    replace_order: ["foot control", "circuit board"]
+    notes: null
+
+  - symptom: "The zig-zag movement of the machine does not work correctly."
+    checks:
+      - "Check that the twin needle isn't activated."
+      - "Check in the Service Program - Sensor menu that the sector forward is working, should read from 0-31."
+      - "If error: check first that the cable between the sensor board and Main PC-board is correctly inserted and not damaged."
+      - "Check the synchronizing screen is not damaged; if damaged, replace the screen."
+      - "Still error: replace the sensor board."
+      - "Check that the cable connection of the step motor to the circuit board is correctly inserted and not damaged."
+      - "Check the signals of the circuit board to the step motor."
+      - "If the step motor is working, replace the circuit board."
+      - "If the step motor is not working, replace the sewing head complete, or the step motor."
+    replace_order: ["synchronizer screen", "sensor board", "circuit board", "sewing head complete or step motor"]
+    notes: null
+
+  - symptom: "The feeding movement of the machine does not work correctly."
+    checks:
+      - "Check that the twin needle isn't activated."
+      - "Check in the Service Program - Sensor menu that the sector forward is working, should read from 0-31."
+      - "If error: check first that the cable between the sensor board and Main PC-board is correctly inserted and not damaged."
+      - "Check the synchronizing/stop-right screen is not damaged; if damaged, replace the screen."
+      - "Still error: replace the sensor board."
+      - "Check that the cable connection of the step motor to the circuit board is correctly inserted and not damaged."
+      - "Check the signals of the circuit board to the step motor."
+      - "If the step motor is working, replace the circuit board."
+      - "If the step motor is not working, replace the step motor."
+    replace_order: ["synchronizer/stop-right screen", "sensor board", "circuit board", "step motor"]
+    notes: null
+
+  - symptom: "The stitch length balance of the machine is not correct (buttonholes, pattern stitches, letters)."
+    checks:
+      - "Always use the correct presser foot."
+      - "Check the feed dog height (setting 11)."
+      - "Check the pre-setting of the feeding step motor (setting 26)."
+      - "Check that there is no friction in the feeding mechanism."
+      - "Adjust the stitch length balance (setting 24)."
+    replace_order: []
+    notes: null
+
+  - symptom: "The thread tension does not work."
+    checks:
+      - "Check the cable connections between the (thread tension) step motor and circuit board are correctly inserted and not damaged."
+      - "Try a new step motor."
+      - "Try a new circuit board."
+    replace_order: ["step motor", "circuit board"]
+    notes: null
+
+  - symptom: "The machine does not alarm when the lower thread ends."
+    checks:
+      - "Check the lower thread sensor in the service program by rotating the hand wheel slowly."
+      - "Check that cables to the circuit board are correctly inserted and not damaged."
+      - "Try a new lower thread sensor cable."
+    replace_order: ["lower thread sensor cable"]
+    notes: "Before doing any service, clean both diodes of the lower thread sensor and remove all fluff and grease."

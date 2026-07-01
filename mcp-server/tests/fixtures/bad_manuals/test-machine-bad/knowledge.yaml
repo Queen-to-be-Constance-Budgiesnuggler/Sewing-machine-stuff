@@ -1,0 +1,36 @@
+schema_version: 1
+
+machine:
+  slug: test-machine-bad
+  brand: TestBrand
+  model: Test Machine Bad
+  aliases: []
+  manual_pdf: manuals/test-machine-bad/test-manual.pdf
+  manual_version: "TEST-BAD-1"
+  source_pages: 5
+  notes: null
+
+specifications: []
+
+settings:
+  - number: 1
+    title: "Duplicate setting A"
+    page: 1
+    description: "This setting number is duplicated on purpose to fail validation."
+    spec: null
+    service_menu_path: null
+    related_settings: []
+  - number: 1
+    title: "Duplicate setting B"
+    page: 2
+    description: "Same number as above -- should be rejected by the schema validator."
+    spec: null
+    service_menu_path: null
+    related_settings: []
+
+service_program:
+  menus: []
+
+disassembly: []
+
+fault_finding: []
